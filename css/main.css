@@ -1,0 +1,145 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 15px;
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 376px) {
+    #main-header > h2 {
+        font-size: 30px;
+    }
+
+    #main-header > p {
+        width: 40%;
+    }
+
+    #main-container {
+    width: 71%;
+    height: 68%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+    "supervisor team-builder calculator"
+    "supervisor karma calculator"
+    ;
+    margin-bottom: 3vh;
+    }   
+}
+
+@media (max-width: 375px) {
+    #main-header > h1 {
+        font-size: 22px;
+    }
+
+    #main-header > h2 {
+        font-size: 22px;
+    }
+
+    #main-header > p {
+        font-size: 10px;
+        width: 80%;
+    }
+
+    #main-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        margin-top: 10px;
+    }
+}
+
+/* header section */
+
+#main-header {
+    width: 100%;
+    height: 26%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-header > h1 {
+    font-weight: 200;
+}
+
+#main-header > h2 {
+    font-weight: 600;
+}
+
+#main-header > p {
+    font-weight: 200;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* end of header section */
+
+/* main content */
+
+.card {
+    width: 240px;
+    height: 150px;
+    padding: 8%;
+    text-align: left;
+    box-shadow: -3px 10px 10px #DDD;
+    border-radius: 3%;
+}
+
+.card > p {
+    font-family: 'Poppins';
+    font-size: 12px;
+}
+
+.card > svg {
+    transform: translateX(280%) translateY(50%);
+}
+
+#supervisor {
+    border-top: 4px solid hsl(180, 62%, 55%);
+    grid-area: supervisor;
+}
+
+#team-builder {
+    border-top: 4px solid hsl(0, 78%, 62%);
+    grid-area: team-builder;
+}
+
+#karma {
+    border-top: 4px solid hsl(34, 97%, 64%);
+    grid-area: karma;
+}
+
+#calculator {
+    border-top: 4px solid hsl(212, 86%, 64%);
+    grid-area: calculator;
+}
+
+/* end of main content */
+
+/* footer */
+
+.attribution {
+    font-size: 11px; 
+    text-align: center; 
+}
+    
+.attribution a {    
+    color: hsl(228, 45%, 44%); 
+}
+
+/* end of footer */
