@@ -1,0 +1,119 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    max-width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins';
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-header {
+    width: 300px;
+    height: 20%;
+    margin: 50px 0px;
+}
+
+#main-header > h1 {
+    font-size: 1.5em;
+    font-weight: 200;
+    color: hsl(234, 12%, 34%);
+    text-align: center;
+}
+
+#sub-header {
+    font-size: 1em;
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+}
+
+#description {
+    color: hsl(229, 6%, 66%);
+    font-weight: 200;
+    text-align: center;
+}
+
+#main-container {
+    width: 80%;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: 290px;
+    padding: 10px;
+    height: 200px;
+    box-shadow: 1px 10px 10px #DDD;
+    border-radius: 2%;
+    margin-top: 20px;
+}
+
+.card > h2 {
+    color: hsl(234, 12%, 34%);
+}
+
+.card > p {
+    color: hsl(229, 6%, 66%);
+    font-weight: 200;
+}
+
+.card > svg {
+    transform: translateX(320%) translateY(60%);
+}
+
+#supervisor {
+    border-top:5px solid hsl(180, 62%, 55%);
+}
+
+#team-builder {
+    border-top:5px solid hsl(0, 78%, 62%);
+}
+
+#karma {
+    border-top:5px solid hsl(34, 97%, 64%);
+}
+
+#calculator {
+    border-top:5px solid hsl(212, 86%, 64%);
+}
+
+@media (min-width: 995px) {
+    #main-header {
+        width: 450px;
+        height: 70px;
+        margin: 5px 0px 30px 0px;
+    }
+
+    #main-container {
+        width: 995px;
+        height: auto;
+        display: grid;
+        grid-template-areas: 
+        "supervisor team-builder calculator"
+        "supervisor karma calculator"
+        ;
+    }
+
+    #supervisor {
+        grid-area: supervisor;
+    }
+    
+    #team-builder {
+        grid-area: team-builder;
+    }
+    
+    #karma {
+        grid-area: karma;
+    }
+    
+    #calculator {
+        grid-area: calculator;
+    }
+}
